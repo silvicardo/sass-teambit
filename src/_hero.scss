@@ -1,0 +1,54 @@
+//VARIABILI
+$heroTextColor: $defaultTextColor;
+$heroBtnsBackground: $btnBlue;
+$heroBtnsTextColor: white;
+$heroBtnsFontSize: $btnFontSize;
+$HeroBtnsHoverBackground: #233569;
+$HeroBtnsHoverBgTransition: 0.3s;
+
+//STYLES
+
+.hero {
+  margin: 100px auto;
+  color: $heroTextColor;
+  &:after {
+    @include clearfix;
+  }
+  .hero_left{
+    @include col_6;
+    h1 {
+      line-height: 4.5rem;
+      font-size: 3.5rem;
+      font-weight: 600;
+    }
+    h4 {
+      margin: 40px 0;
+      line-height: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .signup_area {
+      margin-bottom: 20px;
+      span {
+        margin: 0px 10px;
+      }
+    }
+    .btn_signup {
+      background: $heroBtnsBackground;
+      color: $heroBtnsTextColor;
+      font-weight: 400;
+      font-size: $heroBtnsFontSize;
+      transition: $HeroBtnsHoverBgTransition background;
+      &:hover {
+        background: $HeroBtnsHoverBackground;
+      }
+    }
+  }
+  .hero_right {
+    @include col_6;
+    text-align: right;
+    img {
+      max-width: 90%;
+    }
+  }
+}

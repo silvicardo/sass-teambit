@@ -2,12 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
 }
 
+a {
+  color: #58402c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #30488f;
+}
+
+a i {
+  color: #58402c;
+  margin-left: 10px;
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -15,22 +29,33 @@
   max-width: 890px;
 }
 
-.btn_signup {
+button {
+  background: white;
+}
+
+button.btn_signup {
   padding: 8px 10px;
   border-radius: 6px;
   border: 1px solid #30488F;
   outline-style: none;
   font-weight: bold;
-  background: white;
   color: #30488F;
   cursor: pointer;
 }
 
-.btn_signup img.logo {
+button.btn_signup img.logo {
   vertical-align: middle;
   width: 15px;
   height: 15px;
   margin-right: 10px;
+}
+
+.bg_green {
+  background: green;
+}
+
+.bg_red {
+  background: red;
 }
 
 nav {
@@ -60,18 +85,72 @@ nav ul li button.btn_signup {
 }
 
 nav ul li a {
-  text-decoration: none;
-  margin-right: 20px;
+  margin-right: 35px;
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+.hero {
+  margin: 100px auto;
   color: #58402c;
 }
 
-nav ul li a:hover {
-  color: #30488f;
+.hero:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-nav ul li a i.fa-caret-down {
-  margin-left: 10px;
+.hero .hero_left {
+  float: left;
+  width: 50%;
+}
+
+.hero .hero_left h1 {
+  line-height: 4.5rem;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.hero .hero_left h4 {
+  margin: 40px 0;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.hero .hero_left .signup_area {
+  margin-bottom: 20px;
+}
+
+.hero .hero_left .signup_area span {
+  margin: 0px 10px;
+}
+
+.hero .hero_left .btn_signup {
+  background: #30488F;
+  color: white;
+  font-weight: 400;
+  font-size: 0.8rem;
+  transition: 0.3s background;
+}
+
+.hero .hero_left .btn_signup:hover {
+  background: #233569;
+}
+
+.hero .hero_right {
+  float: left;
+  width: 50%;
+  text-align: right;
+}
+
+.hero .hero_right img {
+  max-width: 90%;
+}
+
+.claim {
+  background: #FFE7D2;
+  height: 500px;
 }
 
