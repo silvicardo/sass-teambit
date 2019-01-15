@@ -1,0 +1,48 @@
+//VARIABILI
+
+$navbarHeight: 70px;
+$navbarBgColor: white;
+$navbarFontSize: 0.8rem;
+$navbarTextColor: $defaultTextColor;
+$navLinksHoverTextColor: $hoverDefaultTextColor;
+$navLinksMarginRight: 20px;
+$navIconsMarginLeft: 10px;
+$navbarBorderBottom: 1px solid black;
+
+//STYLE
+nav {
+  background: $navbarBgColor;
+  height: $navbarHeight;
+  line-height: $navbarHeight;
+  border-bottom: $navbarBorderBottom;
+  & > img {
+    vertical-align: middle;
+    height: calc($navbarHeight / 2);
+    width: auto;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      display: inline-block;
+      button.btn_signup {
+        font-size: $navbarFontSize;
+      }
+      a {
+        text-decoration: none;
+        margin-right: $navLinksMarginRight;
+        font-size: $navbarFontSize;
+        font-weight: bold;
+        color: $defaultTextColor;
+        &:hover {
+          color:$navLinksHoverTextColor;
+        }
+        i.fa-caret-down {
+          margin-left: $navIconsMarginLeft;
+        }
+
+      }
+    }
+  }
+
+}

@@ -2,4 +2,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  &.small {
+    max-width: 890px;
+  }
+}
+
+.btn_signup {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid $btnBlue;
+  outline-style: none;
+  font-weight: bold;
+  background: white;
+  color: $btnBlue;
+  cursor: pointer;
+  img.logo {
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
 }
