@@ -6,6 +6,12 @@
   font-size: 16px;
 }
 
+#main_container {
+  max-width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+
 a {
   color: #58402c;
   text-decoration: none;
@@ -35,6 +41,11 @@ h3 {
   font-weight: 600;
 }
 
+h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -42,6 +53,10 @@ h3 {
 
 .container.small {
   max-width: 890px;
+}
+
+.container.main_quote {
+  max-width: 600px;
 }
 
 .row:after {
@@ -95,6 +110,10 @@ h3 {
   width: 50%;
 }
 
+.row:not(.elements_end).center_elements > div.col_6:first-child:nth-last-child(1) {
+  margin-left: 25%;
+}
+
 .row.elements_end > div.col_6 {
   float: right;
   width: 50%;
@@ -119,6 +138,26 @@ button.btn_signup img.logo {
   width: 15px;
   height: 15px;
   margin-right: 10px;
+}
+
+.signup_area {
+  margin-bottom: 20px;
+}
+
+.signup_area .btn_signup {
+  background: #30488F;
+  color: white;
+  font-weight: 400;
+  font-size: 0.8rem;
+  transition: 0.3s background;
+}
+
+.signup_area .btn_signup:hover {
+  background: #233569;
+}
+
+.signup_area span {
+  margin: 0px 10px;
 }
 
 .bg_green {
@@ -179,26 +218,6 @@ nav ul li a {
   font-weight: 500;
 }
 
-.hero .hero_left .signup_area {
-  margin-bottom: 20px;
-}
-
-.hero .hero_left .signup_area span {
-  margin: 0px 10px;
-}
-
-.hero .hero_left .btn_signup {
-  background: #30488F;
-  color: white;
-  font-weight: 400;
-  font-size: 0.8rem;
-  transition: 0.3s background;
-}
-
-.hero .hero_left .btn_signup:hover {
-  background: #233569;
-}
-
 .hero .hero_right {
   text-align: right;
 }
@@ -247,7 +266,7 @@ nav ul li a {
 }
 
 .claim .claim_block.traditional_people {
-  border-bottom: 1px solid #58402c;
+  border-bottom: 1px solid #bdb5af;
 }
 
 .learn_more {
@@ -305,5 +324,69 @@ nav ul li a {
 
 .learn_more .row.elements_end > div.image img {
   left: 0;
+}
+
+.quote {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  color: #58402c;
+  background: #FFE7D2;
+}
+
+.quote h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.quote h3 img {
+  width: 40px;
+  height: 40px;
+}
+
+.quote .main_quote {
+  height: 400px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  padding: 20px 30px;
+  background: white;
+  border: 1px solid #bdb5af;
+  border-radius: 6px;
+}
+
+.quote .main_quote img.quote_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+}
+
+.quote .main_quote .co_founders {
+  display: flex;
+}
+
+.quote .main_quote .co_founders img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.quote .main_quote .co_founders .names h6 {
+  color: #30488f;
+  margin-bottom: 7px;
+}
+
+.quote .main_quote .co_founders .names p {
+  font-size: 0.7rem;
 }
 

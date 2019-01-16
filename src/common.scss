@@ -8,6 +8,12 @@
   font-size: 16px;
 }
 
+#main_container {
+  max-width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+
 a {
   color: $defaultTextColor;
   text-decoration: none;
@@ -33,6 +39,11 @@ h4 {
 h3 {
   font-size: $defaultH3FontSize;
   font-weight: $defaultH3FontWeight;
+}
+
+h6 {
+  font-size: $defaultH6FontSize;
+  font-weight: $defaultH6FontWeight;
 }
 
 //CONTAINERS E GRID SYSTEM
@@ -83,6 +94,9 @@ h3 {
   &.small {
     max-width: 890px;
   }
+  &.main_quote {
+    max-width: 600px;
+  }
 }
 
 .row  {
@@ -126,6 +140,11 @@ h3 {
   &:not(.elements_end) > div.col_6 {
     @include col_6;
   }
+  &:not(.elements_end).center_elements > div.col_6 {
+    &:first-child:nth-last-child(1) {
+      margin-left: 25%;
+    }
+  }
   &.elements_end > div.col_6 {
     @include col_6_end;
   }
@@ -151,6 +170,24 @@ button {
     }
   }
 }
+
+.signup_area {
+  margin-bottom: 20px;
+  .btn_signup {
+    background: $btnBlue;
+    color: $whiteTextColor;
+    font-weight: 400;
+    font-size: $btnFontSize;
+    transition: $btnHoverBgTransition background;
+    &:hover {
+      background: $btnHoverBackground;
+    }
+  }
+  span {
+    margin: 0px 10px;
+  }
+}
+
 
 //COLORI
 

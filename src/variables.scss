@@ -2,8 +2,12 @@
 
 //COLORI TESTO
 $defaultTextColor: #58402c;
+$whiteTextColor: white;
 $hoverDefaultTextColor: #30488f;
 $linksDefaultTextColor: #30488f;
+
+//COLORI BORDI
+$bordersPrimary: #bdb5af;
 
 //H1
 $defaultH1FontSize: 3.5rem;
@@ -17,6 +21,11 @@ $defaultH3FontWeight: 600;
 $defaultH4FontSize: 1.7rem;
 $defaultH4FontWeight: 500;
 
+// H6
+$defaultH6FontSize: 0.8rem;
+$defaultH6FontWeight: 400;
+
+
 //COLORI DI SFONDO
 $backgroundPrimary: white;
 $backgroundSecondary: #FFE7D2;
@@ -27,3 +36,5 @@ $iconsMarginLeft: 10px;
 //BOTTONI
 $btnBlue: #30488F;
 $btnFontSize: 0.8rem;
+$btnHoverBackground: #233569;
+$btnHoverBgTransition: 0.3s;

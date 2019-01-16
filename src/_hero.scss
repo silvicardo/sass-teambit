@@ -4,11 +4,11 @@ $heroH1FontSize: $defaultH1FontSize;
 $HeroH1FontWeight:$defaultH1FontWeight;
 $heroH4FontSize: $defaultH4FontSize;
 $HeroH4FontWeight:$defaultH4FontWeight;
-$heroBtnsBackground: $btnBlue;
-$heroBtnsTextColor: white;
-$heroBtnsFontSize: $btnFontSize;
-$HeroBtnsHoverBackground: #233569;
-$HeroBtnsHoverBgTransition: 0.3s;
+$heroBtnsBackground: $btnBlue;//signup_area (decommentare sotto)
+$heroBtnsTextColor: $whiteTextColor;//signup_area (decommentare sotto)
+$heroBtnsFontSize: $btnFontSize;//signup_area (decommentare sotto)
+$HeroBtnsHoverBackground: $btnHoverBackground;//signup_area (decommentare sotto)
+$HeroBtnsHoverBgTransition: $btnHoverBgTransition;//signup_area (decommentare sotto)
 
 //STYLES
 
@@ -27,22 +27,24 @@ $HeroBtnsHoverBgTransition: 0.3s;
       font-size: $heroH4FontSize;
       font-weight: $HeroH4FontWeight;
     }
-    .signup_area {
-      margin-bottom: 20px;
-      span {
-        margin: 0px 10px;
-      }
-    }
-    .btn_signup {
-      background: $heroBtnsBackground;
-      color: $heroBtnsTextColor;
-      font-weight: 400;
-      font-size: $heroBtnsFontSize;
-      transition: $HeroBtnsHoverBgTransition background;
-      &:hover {
-        background: $HeroBtnsHoverBackground;
-      }
-    }
+    //DECOMMENTA PER MODIFICARE CON LE VARIABILI
+    //GIA' PREDISPOSTE LA signup_area
+    // .signup_area {
+    //   margin-bottom: 20px;
+    //   .btn_signup {
+    //     background: $heroBtnsBackground;
+    //     color: $heroBtnsTextColor;
+    //     font-weight: 400;
+    //     font-size: $heroBtnsFontSize;
+    //     transition: $HeroBtnsHoverBgTransition background;
+    //     &:hover {
+    //       background: $HeroBtnsHoverBackground;
+    //     }
+    //   }
+    //   span {
+    //     margin: 0px 10px;
+    //   }
+    // }
   }
   .hero_right {
     text-align: right;
