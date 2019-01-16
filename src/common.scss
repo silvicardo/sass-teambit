@@ -1,3 +1,5 @@
+//REGOLE PRINCIPALI
+
 *{
   margin: 0;
   padding: 0;
@@ -18,6 +20,33 @@ a {
   }
 }
 
+//CONTAINERS E GRID SYSTEM
+
+//CONTAINERS E GRID SYSTEM ---> MIXINS
+
+@mixin clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@mixin col_6 {
+  float: left;
+  width: 50%;
+}
+
+@mixin col_4 {
+  float: left;
+  width: calc(100% / 3);
+}
+
+@mixin col_3 {
+  float: left;
+  width: 25%;
+}
+
+//CONTAINERS E GRID SYSTEM ---> CLASSI
+
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -25,6 +54,31 @@ a {
     max-width: 890px;
   }
 }
+
+.row  {
+  &:after {
+    @include clearfix;
+  }
+  & > div.col_3 {
+    @include col_3;
+  }
+  &.center_elements > div.col_3 {
+    &:first-child:nth-last-child(3) {
+      margin-left: calc(25% / 2);
+    }
+    &:first-child:nth-last-child(2) {
+      margin-left: 25%;
+    }
+    &:first-child:nth-last-child(1) {
+      margin-left: calc(75% / 2);
+    }
+  }
+  & > div.col_6 {
+    @include col_6;
+  }
+}
+
+//COMPONENTI
 
 button {
   background: white;
@@ -45,26 +99,12 @@ button {
   }
 }
 
+//COLORI
+
 .bg_green {
   background: green;
 }
 
 .bg_red {
   background: red;
-}
-
-//MIXINS
-@mixin clearfix {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-@mixin col_6 {
-  float: left;
-  width: 50%;
-}
-@mixin col_4 {
-  float: left;
-  width: 25%;
 }

@@ -29,6 +29,34 @@ a i {
   max-width: 890px;
 }
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row > div.col_3 {
+  float: left;
+  width: 25%;
+}
+
+.row.center_elements > div.col_3:first-child:nth-last-child(3) {
+  margin-left: calc(25% / 2);
+}
+
+.row.center_elements > div.col_3:first-child:nth-last-child(2) {
+  margin-left: 25%;
+}
+
+.row.center_elements > div.col_3:first-child:nth-last-child(1) {
+  margin-left: calc(75% / 2);
+}
+
+.row > div.col_6 {
+  float: left;
+  width: 50%;
+}
+
 button {
   background: white;
 }
@@ -95,17 +123,6 @@ nav ul li a {
   color: #58402c;
 }
 
-.hero:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.hero .hero_left {
-  float: left;
-  width: 50%;
-}
-
 .hero .hero_left h1 {
   line-height: 4.5rem;
   font-size: 3.5rem;
@@ -115,7 +132,7 @@ nav ul li a {
 .hero .hero_left h4 {
   margin: 40px 0;
   line-height: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
 }
 
@@ -140,8 +157,6 @@ nav ul li a {
 }
 
 .hero .hero_right {
-  float: left;
-  width: 50%;
   text-align: right;
 }
 
@@ -151,6 +166,44 @@ nav ul li a {
 
 .claim {
   background: #FFE7D2;
-  height: 500px;
+  color: #58402c;
+}
+
+.claim .claim_block {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.claim .claim_block h3 {
+  margin: 0 auto;
+  width: 600px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.claim .claim_block .row {
+  margin: 80px auto;
+}
+
+.claim .claim_block .row > div.col_3 img {
+  height: 130px;
+  margin-bottom: 10px;
+}
+
+.claim .claim_block .row > div.col_3 p {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.claim .claim_block .conclusion img {
+  max-width: 300px;
+}
+
+.claim .claim_block .conclusion.after img {
+  margin-bottom: 80px;
+}
+
+.claim .claim_block.traditional_people {
+  border-bottom: 1px solid #58402c;
 }
 

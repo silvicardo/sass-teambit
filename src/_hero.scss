@@ -11,11 +11,7 @@ $HeroBtnsHoverBgTransition: 0.3s;
 .hero {
   margin: 100px auto;
   color: $heroTextColor;
-  &:after {
-    @include clearfix;
-  }
   .hero_left{
-    @include col_6;
     h1 {
       line-height: 4.5rem;
       font-size: 3.5rem;
@@ -24,7 +20,7 @@ $HeroBtnsHoverBgTransition: 0.3s;
     h4 {
       margin: 40px 0;
       line-height: 2rem;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       font-weight: 500;
     }
     .signup_area {
@@ -45,7 +41,6 @@ $HeroBtnsHoverBgTransition: 0.3s;
     }
   }
   .hero_right {
-    @include col_6;
     text-align: right;
     img {
       max-width: 90%;

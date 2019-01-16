@@ -1,8 +1,53 @@
 //VARIABILI
+$claimBackground: $backgroundSecondary;
+$claimTextColor: $defaultTextColor;
+$claimH3Width: 600px;
+$claimH3FontSize: 1.6rem;
+$claimH3FontWeight: 600;
+$claimRowMarginY: 80px;
+$claimBlockPaddingY: 80px;
+$claimBlockConclusionImgWidth: 300px;
 
 //STYLES
 
 .claim {
-  background: #FFE7D2;
-  height: 500px;
+  background: $claimBackground;
+  color: $claimTextColor;
+  .claim_block {
+    padding: $claimBlockPaddingY 0;
+    text-align: center;
+    h3 {
+      margin: 0 auto;
+      width: $claimH3Width;
+      font-size: $claimH3FontSize;
+      font-weight: $claimH3FontWeight;
+    }
+    .row  {
+      margin: $claimRowMarginY auto;
+      & > div.col_3 {
+        img {
+          height: 130px;
+          margin-bottom: 10px;
+        }
+        p {
+          margin-left: 15%;
+          margin-right: 15%;
+        }
+      }
+    }
+    .conclusion {
+      img {
+        max-width: $claimBlockConclusionImgWidth;
+      }
+      &.after img {
+        margin-bottom: 80px;
+      }
+    }
+    &.traditional_people {
+      border-bottom: 1px solid $claimTextColor;
+    }
+  }
+
+
+
 }
