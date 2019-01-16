@@ -60,3 +60,33 @@ $learnMoreLinkColor: $linksDefaultTextColor;
     }
   }
 }
+
+//mediaQueries
+
+@media all and (min-width: 1150px) {
+
+
+}
+
+@media all and (max-width: 1149px) {
+
+  .learn_more{
+    .row {
+      & > div.image {
+        img {
+          max-height: 95%;
+        }
+      }
+
+      & > div.description {
+        img {
+          max-width: 45%;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+
+}

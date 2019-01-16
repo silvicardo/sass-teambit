@@ -1,11 +1,29 @@
 //REGOLE PRINCIPALI
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+}
+
+//REGOLE PRINCIPALI ---> fontSize Media Queries
+@media all and (max-width: 1149px) {
+
+  * {
+    font-size: 14px;
+  }
+
+}
+
+@media all and (max-width: 768px) {
+
+
+    * {
+      font-size: 12px;
+    }
+
 }
 
 #main_container {
@@ -15,6 +33,7 @@
 }
 
 a {
+  cursor: pointer;
   color: $defaultTextColor;
   text-decoration: none;
   &:hover {
@@ -86,67 +105,106 @@ h6 {
   width: 25%;
 }
 
-//CONTAINERS E GRID SYSTEM ---> CLASSI
+//CONTAINERS ---> CLASSI
 
 .container {
   max-width: 1150px;
   margin: 0 auto;
-  &.small {
-    max-width: 890px;
-  }
   &.main_quote {
     max-width: 600px;
   }
 }
 
-.row  {
-  &:after {
-    @include clearfix;
-  }
-  //COL_3
-  &:not(.elements_end) > div.col_3 {
-    @include col_3;
-  }
-  &.elements_end > div.col_3 {
-    @include col_3_end;
-  }
-  &.center_elements > div.col_3 {
-    &:first-child:nth-last-child(3) {
-      margin-left: calc(25% / 2);
+//RESPONSIVE GRID SYSTEM
+
+@media all and (min-width: 1150px) {
+
+  .row  {
+    &:after {
+      @include clearfix;
     }
-    &:first-child:nth-last-child(2) {
-      margin-left: 25%;
+    //COL_3
+    &:not(.elements_end) > div.col_3 {
+      @include col_3;
     }
-    &:first-child:nth-last-child(1) {
-      margin-left: calc(75% / 2);
+    &.elements_end > div.col_3 {
+      @include col_3_end;
+    }
+    &.center_elements > div.col_3 {
+      &:first-child:nth-last-child(3) {
+        margin-left: calc(25% / 2);
+      }
+      &:first-child:nth-last-child(2) {
+        margin-left: 25%;
+      }
+      &:first-child:nth-last-child(1) {
+        margin-left: calc(75% / 2);
+      }
+    }
+    //COL_4
+    &:not(.elements_end) > div.col_4 {
+      @include col_4;
+    }
+    &.elements_end > div.col_4 {
+      @include col_4_end;
+    }
+    &.center_elements > div.col_4 {
+      &:first-child:nth-last-child(2) {
+        margin-left: calc((100% - (100% /3)) / 2);
+      }
+      &:first-child:nth-last-child(1) {
+        margin-left: calc((100% / 3) / 2);
+      }
+    }
+    //COL_6
+    &:not(.elements_end) > div.col_6 {
+      @include col_6;
+    }
+    &:not(.elements_end).center_elements > div.col_6 {
+      &:first-child:nth-last-child(1) {
+        margin-left: 25%;
+      }
+    }
+    &.elements_end > div.col_6 {
+      @include col_6_end;
     }
   }
-  //COL_4
-  &:not(.elements_end) > div.col_4 {
-    @include col_4;
+
+}
+
+@media all and (max-width: 1149px) {
+
+  section {
+    overflow: hidden;
   }
-  &.elements_end > div.col_4 {
-    @include col_4_end;
-  }
-  &.center_elements > div.col_4 {
-    &:first-child:nth-last-child(2) {
-      margin-left: calc((100% - (100% /3)) / 2);
+
+  .row  {
+    height: auto;
+    &:after {
+      @include clearfix;
     }
-    &:first-child:nth-last-child(1) {
-      margin-left: calc((100% / 3) / 2);
+    //COL_3+4+6
+    & > .col_3, & > .col_4, & > .col_6 {
+      float:left;
+      width: 100%;
+      text-align: center;
+      overflow: hidden;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-bottom: 70px;
     }
   }
-  //COL_6
-  &:not(.elements_end) > div.col_6 {
-    @include col_6;
-  }
-  &:not(.elements_end).center_elements > div.col_6 {
-    &:first-child:nth-last-child(1) {
-      margin-left: 25%;
+}
+
+@media all and (max-width: 768px) {
+
+  .container {
+    &.main_quote {
+      width: 90%;
     }
   }
-  &.elements_end > div.col_6 {
-    @include col_6_end;
+  h1, h2, h3, h4, h5, h6 {
+    max-width: 90%;
   }
 }
 
@@ -171,23 +229,36 @@ button {
   }
 }
 
-.signup_area {
-  margin-bottom: 20px;
-  .btn_signup {
-    background: $btnBlue;
-    color: $whiteTextColor;
-    font-weight: 400;
-    font-size: $btnFontSize;
-    transition: $btnHoverBgTransition background;
-    &:hover {
-      background: $btnHoverBackground;
+
+  .signup_area {
+    margin-bottom: 20px;
+    .btn_signup {
+      background: $btnBlue;
+      color: $whiteTextColor;
+      font-weight: 400;
+      font-size: $btnFontSize;
+      transition: $btnHoverBgTransition background;
+      &:hover {
+        background: $btnHoverBackground;
+      }
+    }
+    span {
+      margin: 0px 10px;
     }
   }
-  span {
-    margin: 0px 10px;
-  }
-}
 
+//COMPONENTI---> mediaQueries
+
+@media all and (max-width: 768px) {
+  .signup_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      margin: 10px auto;
+      }
+    }
+}
 
 //COLORI
 
