@@ -2,8 +2,8 @@
 $claimBackground: $backgroundSecondary;
 $claimTextColor: $defaultTextColor;
 $claimH3Width: 600px;
-$claimH3FontSize: 1.6rem;
-$claimH3FontWeight: 600;
+$claimH3FontSize: $defaultH3FontSize;
+$claimH3FontWeight: $defaultH3FontWeight;
 $claimRowMarginY: 80px;
 $claimBlockPaddingY: 80px;
 $claimBlockConclusionImgWidth: 300px;

@@ -1,7 +1,62 @@
 //VARIABILI
+$learnMoreTextColor: $defaultTextColor;
+$learnMoreRowsHeight: 550px;
+$learnMoreBlocksYSpacing: 80px;
+$learnMoreH3FontSize: $defaultH3FontSize;
+$learnMoreH3FontWeight: $defaultH3FontWeight;
+$learnMoreParAndLinkFontSize: $defaultH3FontSize;
+$learnMoreParAndLinkFontWeight: 300;
+$learnMoreLinkColor: $linksDefaultTextColor;
 
 //STYLES
 
 .learn_more {
-  
+  padding-bottom: $learnMoreBlocksYSpacing;
+  color: $learnMoreTextColor;
+  .row {
+    height: $learnMoreRowsHeight;
+    padding-top: $learnMoreBlocksYSpacing;
+    margin-bottom: $learnMoreBlocksYSpacing;
+    & > div {
+      height: 100%;
+      &.image {
+        position:relative;
+        img {
+          position: absolute;
+          top: 0;
+          right:0;
+          height: 110%;
+        }
+      }
+      &.description {
+        display: flex;
+        flex-direction: column;
+        justify-content:  space-between;
+        h3 {
+          font-size: $learnMoreH3FontSize;
+          font-weight: $learnMoreH3FontWeight;
+        }
+        p, a {
+          font-size: $learnMoreParAndLinkFontSize;
+          font-weight: $learnMoreParAndLinkFontWeight;
+        }
+        a, a > i {
+          color: $learnMoreLinkColor;
+        }
+        img {
+          align-self: center;
+          max-width: 60%;
+        }
+      }
+    }
+    &.elements_end {
+      & > div {
+        &.image {
+          img {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
 }

@@ -20,6 +20,21 @@ a i {
   margin-left: 10px;
 }
 
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -35,8 +50,13 @@ a i {
   clear: both;
 }
 
-.row > div.col_3 {
+.row:not(.elements_end) > div.col_3 {
   float: left;
+  width: 25%;
+}
+
+.row.elements_end > div.col_3 {
+  float: right;
   width: 25%;
 }
 
@@ -52,8 +72,31 @@ a i {
   margin-left: calc(75% / 2);
 }
 
-.row > div.col_6 {
+.row:not(.elements_end) > div.col_4 {
   float: left;
+  width: calc(100% / 3);
+}
+
+.row.elements_end > div.col_4 {
+  float: right;
+  width: calc(100% / 3);
+}
+
+.row.center_elements > div.col_4:first-child:nth-last-child(2) {
+  margin-left: calc((100% - (100% /3)) / 2);
+}
+
+.row.center_elements > div.col_4:first-child:nth-last-child(1) {
+  margin-left: calc((100% / 3) / 2);
+}
+
+.row:not(.elements_end) > div.col_6 {
+  float: left;
+  width: 50%;
+}
+
+.row.elements_end > div.col_6 {
+  float: right;
   width: 50%;
 }
 
@@ -205,5 +248,62 @@ nav ul li a {
 
 .claim .claim_block.traditional_people {
   border-bottom: 1px solid #58402c;
+}
+
+.learn_more {
+  padding-bottom: 80px;
+  color: #58402c;
+}
+
+.learn_more .row {
+  height: 550px;
+  padding-top: 80px;
+  margin-bottom: 80px;
+}
+
+.learn_more .row > div {
+  height: 100%;
+}
+
+.learn_more .row > div.image {
+  position: relative;
+}
+
+.learn_more .row > div.image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 110%;
+}
+
+.learn_more .row > div.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.learn_more .row > div.description h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.learn_more .row > div.description p,
+.learn_more .row > div.description a {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.learn_more .row > div.description a,
+.learn_more .row > div.description a > i {
+  color: #30488f;
+}
+
+.learn_more .row > div.description img {
+  align-self: center;
+  max-width: 60%;
+}
+
+.learn_more .row.elements_end > div.image img {
+  left: 0;
 }
 

@@ -20,6 +20,21 @@ a {
   }
 }
 
+h1 {
+  font-size: $defaultH1FontSize;
+  font-weight: $defaultH1FontWeight;
+}
+
+h4 {
+  font-size: $defaultH4FontSize;
+  font-weight: $defaultH4FontWeight;
+}
+
+h3 {
+  font-size: $defaultH3FontSize;
+  font-weight: $defaultH3FontWeight;
+}
+
 //CONTAINERS E GRID SYSTEM
 
 //CONTAINERS E GRID SYSTEM ---> MIXINS
@@ -35,13 +50,28 @@ a {
   width: 50%;
 }
 
+@mixin col_6_end {
+  float: right;
+  width: 50%;
+}
+
 @mixin col_4 {
   float: left;
   width: calc(100% / 3);
 }
 
+@mixin col_4_end {
+  float: right;
+  width: calc(100% / 3);
+}
+
 @mixin col_3 {
   float: left;
+  width: 25%;
+}
+
+@mixin col_3_end {
+  float: right;
   width: 25%;
 }
 
@@ -59,8 +89,12 @@ a {
   &:after {
     @include clearfix;
   }
-  & > div.col_3 {
+  //COL_3
+  &:not(.elements_end) > div.col_3 {
     @include col_3;
+  }
+  &.elements_end > div.col_3 {
+    @include col_3_end;
   }
   &.center_elements > div.col_3 {
     &:first-child:nth-last-child(3) {
@@ -73,15 +107,34 @@ a {
       margin-left: calc(75% / 2);
     }
   }
-  & > div.col_6 {
+  //COL_4
+  &:not(.elements_end) > div.col_4 {
+    @include col_4;
+  }
+  &.elements_end > div.col_4 {
+    @include col_4_end;
+  }
+  &.center_elements > div.col_4 {
+    &:first-child:nth-last-child(2) {
+      margin-left: calc((100% - (100% /3)) / 2);
+    }
+    &:first-child:nth-last-child(1) {
+      margin-left: calc((100% / 3) / 2);
+    }
+  }
+  //COL_6
+  &:not(.elements_end) > div.col_6 {
     @include col_6;
+  }
+  &.elements_end > div.col_6 {
+    @include col_6_end;
   }
 }
 
 //COMPONENTI
 
 button {
-  background: white;
+  background: $backgroundPrimary;
   &.btn_signup {
     padding: 8px 10px;
     border-radius: 6px;

@@ -1,5 +1,9 @@
 //VARIABILI
 $heroTextColor: $defaultTextColor;
+$heroH1FontSize: $defaultH1FontSize;
+$HeroH1FontWeight:$defaultH1FontWeight;
+$heroH4FontSize: $defaultH4FontSize;
+$HeroH4FontWeight:$defaultH4FontWeight;
 $heroBtnsBackground: $btnBlue;
 $heroBtnsTextColor: white;
 $heroBtnsFontSize: $btnFontSize;
@@ -14,14 +18,14 @@ $HeroBtnsHoverBgTransition: 0.3s;
   .hero_left{
     h1 {
       line-height: 4.5rem;
-      font-size: 3.5rem;
-      font-weight: 600;
+      font-size: $heroH1FontSize;
+      font-weight: $HeroH1FontWeight;
     }
     h4 {
       margin: 40px 0;
       line-height: 2rem;
-      font-size: 1.7rem;
-      font-weight: 500;
+      font-size: $heroH4FontSize;
+      font-weight: $HeroH4FontWeight;
     }
     .signup_area {
       margin-bottom: 20px;
