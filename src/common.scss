@@ -32,6 +32,7 @@
   overflow: hidden;
 }
 
+
 a {
   cursor: pointer;
   color: $defaultTextColor;
@@ -43,6 +44,10 @@ a {
     color: $defaultTextColor;
     margin-left: $iconsMarginLeft;
   }
+}
+
+ul {
+  list-style: none;
 }
 
 h1 {
@@ -233,6 +238,7 @@ button {
   .signup_area {
     margin-bottom: 20px;
     .btn_signup {
+      padding: 8px 15px;
       background: $btnBlue;
       color: $whiteTextColor;
       font-weight: 400;
